@@ -64,12 +64,31 @@
 
 
 
+# import pandas as pd
+
+# # Load the CSV and treat standard missing values correctly
+# df = pd.read_csv("datasate.csv")
+# df['Date']=pd.to_datetime(df['Date'], format='mixed')
+# print(df.to_string())
+
+
+
+# import pandas as pd
+
+# # Load the CSV and treat standard missing values correctly
+# df = pd.read_csv("datasate.csv")
+# df.loc[7,'Duration']=45
+# print(df.to_string())
+
+# import pandas as pd
+
+# # Load the CSV and treat standard missing values correctly
+# df = pd.read_csv("datasate.csv")
+# print(df.duplicated())
+
 import pandas as pd
 
 # Load the CSV and treat standard missing values correctly
 df = pd.read_csv("datasate.csv")
-clean_df = df.dropna()
-print(clean_df.to_string())
-
-
-
+df.drop_duplicates(inplace=True)
+print(df.to_string())
