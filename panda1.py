@@ -39,37 +39,8 @@
 # print(df.to_string()) # this is show all of the values
 # print(df.tail(10))
 
-
-
-# import pandas as pd
-# from io import StringIO
-
-# data = """Duration,Date,Pulse,Maxpulse,Calories
-# 60,'2020/12/27',92,118,241.0
-# 60,'2020/12/28',103,132,NaN
-# 60,'2020/12/29',100,132,280.0
-# 60,'2020/12/30',102,129,380.3
-# 60,'2020/12/31',92,115,243.0
-# """
-
-# df = pd.read_csv(StringIO(data))
-# print("Original:\n", df)
-
-# new_df = df.dropna()
-# print("\nAfter dropna():\n", new_df)
-
-#----------------------------
-
-
-
-
-
 import pandas as pd
+data=pd.read_csv("sales_data_sample.csv")
 
-# Load the CSV and treat standard missing values correctly
-df = pd.read_csv("datasate.csv")
-clean_df = df.dropna()
-print(clean_df.to_string())
-
-
+print(data.to_string())
 
